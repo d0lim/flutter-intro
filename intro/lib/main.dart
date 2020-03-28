@@ -22,14 +22,32 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Hello World Title'),
-        ),
-        body: Text(
-          'Hello World!',
-          style: TextStyle(fontSize: 30),
-        ),
+      home: HelloPage(
+        title: 'Hello World',
+      ),
+    );
+  }
+}
+
+class HelloPage extends StatefulWidget {
+  final String title;
+
+  const HelloPage({Key key, this.title}) : super(key: key);
+
+  @override
+  _HelloPageState createState() => _HelloPageState();
+}
+
+class _HelloPageState extends State<HelloPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Text(
+        widget.title,
+        style: TextStyle(fontSize: 30),
       ),
     );
   }
