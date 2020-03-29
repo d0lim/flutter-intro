@@ -14,6 +14,3 @@ ports:
 
   - port: 36347
     onOpen: notify
-
-  - port: 4000
-    onOpen: ignore
