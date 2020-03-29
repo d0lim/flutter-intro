@@ -23,10 +23,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: CupertinoPage(),
-      // home: HelloPage(
-      //   title: 'Hello World',
-      // ),
+      home: HelloPage(
+        title: 'Hello World',
+      ),
     );
   }
 }
@@ -65,7 +64,16 @@ class _HelloPageState extends State<HelloPage> {
             Text(
               '$_counter',
               style: TextStyle(fontSize: 30),
-            )
+            ),
+            RaisedButton(
+              child: Text('Change page'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => CupertinoPage()),
+                );
+              },
+            ),
           ],
         ),
       ),
