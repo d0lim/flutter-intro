@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intro/root_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,15 +23,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Hello World Title'),
-        ),
-        body: Text(
-          'Hello World!',
-          style: TextStyle(fontSize: 30),
-        ),
-      ),
+      home: RootPage(),
     );
   }
 }
